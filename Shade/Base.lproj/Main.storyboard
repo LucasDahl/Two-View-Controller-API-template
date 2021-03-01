@@ -1,24 +1,172 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l1y-q0-tdt">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Opening View Controller-->
+        <scene sceneID="WqW-1f-kIb">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="l1y-q0-tdt" customClass="OpeningViewController" customModule="Shade" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6TM-4X-40Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="eLb-f7-ytA">
+                                <rect key="frame" x="40.5" y="712" width="333" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bga-Ot-qF1" customClass="transparentButton" customModule="Shade" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="50"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="S0c-8y-pE2"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="qtO-Gc-tXV"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="vTU-KC-RHj"/>
+                                            <constraint firstAttribute="height" constant="50" id="vhC-4N-X45"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Start the battle">
+                                            <color key="titleColor" red="0.79655510190000001" green="0.28069323299999999" blue="0.29555997249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="gotToInsults:" destination="l1y-q0-tdt" eventType="touchUpInside" id="eGW-Gs-j3H"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrA-Ez-Rzy" customClass="transparentButton" customModule="Shade" customModuleProvider="target">
+                                        <rect key="frame" x="178" y="0.0" width="155" height="50"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="OMp-Cq-cwP"/>
+                                        </constraints>
+                                        <state key="normal" title="User Agreement">
+                                            <color key="titleColor" red="0.79655510190000001" green="0.28069323299999999" blue="0.29555997249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="showAgreement:" destination="l1y-q0-tdt" eventType="touchUpInside" id="bKb-Jt-bSh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CUG-Hz-BIf"/>
+                        <color key="backgroundColor" red="0.18739840390000001" green="0.19608876110000001" blue="0.1862561107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CUG-Hz-BIf" firstAttribute="bottom" secondItem="eLb-f7-ytA" secondAttribute="bottom" constant="100" id="hmL-ga-o1R"/>
+                            <constraint firstItem="eLb-f7-ytA" firstAttribute="centerX" secondItem="6TM-4X-40Y" secondAttribute="centerX" id="kf0-pw-1VA"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aeq-1F-jUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-800.00000000000011" y="-14.0625"/>
+        </scene>
+        <!--Insult View Controllers-->
+        <scene sceneID="KJS-aC-pA0">
+            <objects>
+                <viewController storyboardIdentifier="InsultVC" id="hc9-X3-q8B" customClass="InsultViewControllers" customModule="Shade" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5u5-Wx-vF7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Insult" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GME-Hj-IYz">
+                                <rect key="frame" x="112" y="204" width="190" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="deR-Ae-2yL"/>
+                                    <constraint firstAttribute="width" constant="190" id="i27-5j-c89"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.79655510190000001" green="0.28069323299999999" blue="0.29555997249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="79J-Z7-YbZ">
+                                <rect key="frame" x="42" y="712" width="330" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cde-9U-k82" customClass="transparentButton" customModule="Shade" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="50"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="DNM-ch-xBQ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="MeV-FL-0up"/>
+                                            <constraint firstAttribute="height" constant="50" id="kKN-Yi-Iq4"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="zeu-Vg-uVf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Insult">
+                                            <color key="titleColor" red="0.79655510190000001" green="0.28069323299999999" blue="0.29555997249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="newInsult:" destination="hc9-X3-q8B" eventType="touchUpInside" id="aM8-lf-25P"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJM-kg-avb" customClass="transparentButton" customModule="Shade" customModuleProvider="target">
+                                        <rect key="frame" x="175" y="0.0" width="155" height="50"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="2dC-ry-Z2S"/>
+                                            <constraint firstAttribute="height" constant="50" id="Ikr-zm-1OV"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="Rqs-hM-J1X"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="cUE-wV-Wdr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="Share">
+                                            <color key="titleColor" red="0.79655510190000001" green="0.28069323299999999" blue="0.29555997249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="shareTapped:" destination="hc9-X3-q8B" eventType="touchUpInside" id="pg5-fl-UgQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cde-9U-k82" firstAttribute="height" secondItem="RJM-kg-avb" secondAttribute="height" id="SOn-3O-HH4"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UiV-MB-bXZ"/>
+                        <color key="backgroundColor" red="0.18739840390000001" green="0.19608876110000001" blue="0.1862561107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GME-Hj-IYz" firstAttribute="top" secondItem="UiV-MB-bXZ" secondAttribute="top" constant="160" id="W7R-Fx-4ww"/>
+                            <constraint firstItem="UiV-MB-bXZ" firstAttribute="bottom" secondItem="79J-Z7-YbZ" secondAttribute="bottom" constant="100" id="bkJ-MX-NGW"/>
+                            <constraint firstItem="79J-Z7-YbZ" firstAttribute="centerX" secondItem="5u5-Wx-vF7" secondAttribute="centerX" id="h3H-ec-qpJ"/>
+                            <constraint firstItem="GME-Hj-IYz" firstAttribute="centerX" secondItem="5u5-Wx-vF7" secondAttribute="centerX" id="p43-Md-dWe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XnC-o8-sRa"/>
+                    <connections>
+                        <outlet property="insultLabel" destination="GME-Hj-IYz" id="lBg-S1-Kqn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48z-kG-jfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="-14"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>
