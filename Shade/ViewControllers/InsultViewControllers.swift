@@ -57,18 +57,14 @@ class InsultViewControllers: UIViewController {
     
     }
     
+    // This method will allow the user to share the insult
     func shareInsult() {
         
-        // Set the sharing insult
-        var insultToShare = ""
-        
-        // Make sure insult is not nil
-        if(insult != nil) {
-            insultToShare = insult ?? "Error getting insult"
-        }
+        // Properties
+        let insultToShare = insultLabel.text
         
         // Make the activity contorller
-        let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [insultToShare], applicationActivities: nil)
+        let activityViewController: UIActivityViewController = UIActivityViewController(activityItems: [insultToShare!], applicationActivities: nil)
         
         //Ipad popup
         activityViewController.popoverPresentationController?.sourceView = (self.view)
@@ -95,12 +91,15 @@ class InsultViewControllers: UIViewController {
         
     }
     
+    func activityViewController(_ activityViewController: UIActivityViewController, subjectForActivityType activityType: UIActivity.ActivityType?) -> String {
+            return "Email Subject"
+        }
+    
     //==================
     // MARK: IBActions
     //==================
     
     @IBAction func newInsult(_ sender: Any) {
-        getInsult()
         
         // Check if the user should be shown an ad
         // on the first and 10th insult
@@ -119,7 +118,7 @@ class InsultViewControllers: UIViewController {
     }
     
     @IBAction func shareTapped(_ sender: Any) {
-        shareInsult()
+        
         // Check if the user should be shown an ad
         // on the first and 5th share request
         if(totalShares == -1) {

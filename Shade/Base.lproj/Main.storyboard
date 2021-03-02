@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="l1y-q0-tdt">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +14,11 @@
             <objects>
                 <viewController id="l1y-q0-tdt" customClass="OpeningViewController" customModule="Shade" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6TM-4X-40Y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="eLb-f7-ytA">
-                                <rect key="frame" x="40.5" y="712" width="333" height="50"/>
+                                <rect key="frame" x="47.666666666666657" y="742" width="333" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bga-Ot-qF1" customClass="transparentButton" customModule="Shade" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="50"/>
@@ -29,7 +30,7 @@
                                             <constraint firstAttribute="height" constant="50" id="vhC-4N-X45"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                        <state key="normal" title="Start the battle">
+                                        <state key="normal" title="Start Burning">
                                             <color key="titleColor" red="0.79655510190000001" green="0.28069323299999999" blue="0.29555997249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -61,39 +62,39 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burnLogo" translatesAutoresizingMaskIntoConstraints="NO" id="GaR-Pm-4fH">
+                                <rect key="frame" x="-298" y="242" width="1024" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="TFO-qT-rIm">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="431"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CUG-Hz-BIf"/>
                         <color key="backgroundColor" red="0.18739840390000001" green="0.19608876110000001" blue="0.1862561107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="GaR-Pm-4fH" firstAttribute="top" secondItem="CUG-Hz-BIf" secondAttribute="top" constant="198" id="Q0v-Jv-Oaq"/>
                             <constraint firstItem="CUG-Hz-BIf" firstAttribute="bottom" secondItem="eLb-f7-ytA" secondAttribute="bottom" constant="100" id="hmL-ga-o1R"/>
                             <constraint firstItem="eLb-f7-ytA" firstAttribute="centerX" secondItem="6TM-4X-40Y" secondAttribute="centerX" id="kf0-pw-1VA"/>
+                            <constraint firstItem="GaR-Pm-4fH" firstAttribute="centerX" secondItem="6TM-4X-40Y" secondAttribute="centerX" id="oPx-GA-cDC"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeq-1F-jUM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-800.00000000000011" y="-14.0625"/>
+            <point key="canvasLocation" x="-800" y="-14.07035175879397"/>
         </scene>
         <!--Insult View Controllers-->
         <scene sceneID="KJS-aC-pA0">
             <objects>
                 <viewController storyboardIdentifier="InsultVC" id="hc9-X3-q8B" customClass="InsultViewControllers" customModule="Shade" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5u5-Wx-vF7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Insult" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GME-Hj-IYz">
-                                <rect key="frame" x="112" y="204" width="190" height="145"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="deR-Ae-2yL"/>
-                                    <constraint firstAttribute="width" constant="190" id="i27-5j-c89"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
-                                <color key="textColor" red="0.79655510190000001" green="0.28069323299999999" blue="0.29555997249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="79J-Z7-YbZ">
-                                <rect key="frame" x="42" y="712" width="330" height="50"/>
+                                <rect key="frame" x="49" y="742" width="330" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cde-9U-k82" customClass="transparentButton" customModule="Shade" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="155" height="50"/>
@@ -105,7 +106,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="155" id="zeu-Vg-uVf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                        <state key="normal" title="Insult">
+                                        <state key="normal" title="New Burn">
                                             <color key="titleColor" red="0.79655510190000001" green="0.28069323299999999" blue="0.29555997249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -127,7 +128,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="125" id="cUE-wV-Wdr"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                        <state key="normal" title="Share">
+                                        <state key="normal" title="Share Burn">
                                             <color key="titleColor" red="0.79655510190000001" green="0.28069323299999999" blue="0.29555997249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -144,11 +145,27 @@
                                     <constraint firstItem="cde-9U-k82" firstAttribute="height" secondItem="RJM-kg-avb" secondAttribute="height" id="SOn-3O-HH4"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Future Insult" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GME-Hj-IYz">
+                                <rect key="frame" x="119" y="204" width="190" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="deR-Ae-2yL">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="321"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="190" id="i27-5j-c89">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="464"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.79655510190000001" green="0.28069323299999999" blue="0.29555997249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UiV-MB-bXZ"/>
                         <color key="backgroundColor" red="0.18739840390000001" green="0.19608876110000001" blue="0.1862561107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GME-Hj-IYz" firstAttribute="top" secondItem="UiV-MB-bXZ" secondAttribute="top" constant="160" id="W7R-Fx-4ww"/>
+                            <constraint firstItem="GME-Hj-IYz" firstAttribute="top" secondItem="UiV-MB-bXZ" secondAttribute="top" constant="160" id="W7R-Fx-4ww">
+                                <variation key="heightClass=regular-widthClass=regular" constant="165"/>
+                            </constraint>
                             <constraint firstItem="UiV-MB-bXZ" firstAttribute="bottom" secondItem="79J-Z7-YbZ" secondAttribute="bottom" constant="100" id="bkJ-MX-NGW"/>
                             <constraint firstItem="79J-Z7-YbZ" firstAttribute="centerX" secondItem="5u5-Wx-vF7" secondAttribute="centerX" id="h3H-ec-qpJ"/>
                             <constraint firstItem="GME-Hj-IYz" firstAttribute="centerX" secondItem="5u5-Wx-vF7" secondAttribute="centerX" id="p43-Md-dWe"/>
@@ -161,12 +178,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48z-kG-jfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="-14"/>
+            <point key="canvasLocation" x="57.553956834532379" y="-14.07035175879397"/>
         </scene>
     </scenes>
     <resources>
+        <image name="burnLogo" width="1024" height="1024"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.79607844352722168" green="0.29411765933036804" blue="0.28235295414924622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

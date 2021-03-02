@@ -15,7 +15,4 @@ struct Constants {
         static let title = "Terms of Service"
     }
     
-    
-    
-    
 }
